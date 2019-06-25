@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<style type="text/css">
+
+			body {
+			  text-align: center;
+			  background-color: red;
+			}
+
+			h1 {
+			 color: white;
+			 font-size: 80px;
+			}
+
+			.definition {
+			  color: yellow;
+			}
+
+			p {
+			  color: green;
+			}
+
+			div p {
+			  color: white;
+			  
+			}
+
+			p {
+			  color: green;
+			}
+
+			.source {
+			  color: blue;
+			}
+
+			#source {
+			  color: hotpink;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>What is Specificity?</h1>
+		<div>
+		  <p class="definition">If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific and therefore wins out.Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element.The universal selector (*) has low specificity, while ID selectors are highly specific!
+		  </p>
+
+		  <p id="source" class="source">
+		  w3schools</p>
+		  
+		</div>
+	</body>
+</html>
