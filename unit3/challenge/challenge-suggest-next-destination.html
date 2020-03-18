@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-image: url('https://i.imgur.com/yGmrlyg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        div.card {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 5px;
+            margin-top: 15%;
+        }
+
+    </style>
+    <link href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Your Next Destination</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form id="form" class="text-center" style="color: #757575;" onsubmit="return false">
+
+            <p>Do you like beach?</p>
+            <input type="radio" id="yes" name="beach" value="yes">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="beach" value="no">
+            <label for="no">No</label><br>
+
+            <br>
+
+            <p>Rate your budget:</p>
+            <input type="radio" id="low" name="budget" value="low">
+            <label for="low">$</label><br>
+            <input type="radio" id="average" name="budget" value="average">
+            <label for="average">$$</label><br>
+            <input type="radio" id="high" name="budget" value="high">
+            <label for="high">$$$</label><br><br>
+
+            <button class="btn btn-outline-info btn-rounded btn-block my-4" onclick="nextDestination();">Submit</button>
+
+            <p id="result"></p>
+
+        </form>
+    </div>
+</div>
+</body>
+
+
+<script>
+    function nextDestination() {
+        var budget;
+        var beach;
+        var destinations;
+
+        var places = document.getElementsByName('beach');
+
+        var budgets = document.getElementsByName('budget');
+
+        for (var i = 0 ; i < budgets.length; i++) {
+            if (budgets[i].checked) {
+                budget = budgets[i].value;
+                break;
+            }
+        }
+
+        for (var i = 0 ; i < places.length; i++) {
+            if (places[i].checked) {
+                beach = places[i].value;
+                break;
+            }
+        }
+
+        // Write your code here
+
+    }
+</script>
+</html>
+
